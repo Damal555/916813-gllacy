@@ -3,10 +3,26 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Глейси</title>
+    <style media="screen">
+      body {
+        background-color:#849d8f;
+      }
+      .news {
+        background-image: url("img/main/banner-news.png");
+      }
+      .features {
+        background-image: url("img/main/wafer-background.gif");
+      }
+      .subscription {
+        background-image: url("img/main/post-fon1.png");
+        background-image: url("img/main/post-fon.png");
+      }
+    </style>
   </head>
   <body>
+
     <header class="main-header">
-    <p><img class="main-header-logo" src="img/logo.svg" width="" height="" alt="Логотип «Gllacy Shop»"></p>
+    <p><img class="main-header-logo" src="img//header/logo.svg" width="154" height="64" alt="Логотип «Gllacy Shop»"></p>
       <nav class="main-navigation">
         <ul class="site-navigation">
           <li><a href="catalog.html">Каталог</a></li>
@@ -16,23 +32,24 @@
       </nav>
       <div class="user-navigation">
         <ul>
-          <li class="search-link"><img src="img/search.svg" width="" height="" alt="Поиск"></li>
-          <li class="login-link">Вход</li>
-          <li class="basket-link">Корзина</li>
+          <li class="search-link"><img src="img//header/search.svg" width="17" height="17" alt="Поиск"></li>
+          <li class="login-link"><img src="img//header/login.svg" width="21" height="19" alt="Вход">Вход</li>
+          <li class="basket-link"><img src="img/header/basket.svg" width="21" height="20" alt="Корзина">Пусто</li>
         </ul>
       </div>
     </header>
     <main>
       <h1 class="visually-hidden">Магазин мороженого «Gllacy Shop»</h1>
       <!-- Здесь будет слайдер рекламной акции-->
+<img src="img/main/ice-cream-slider.png" width="647" height="584" alt="Корзина">
 
       <section class="features">
         <h2 class="visually-hidden">Преимущества</h2>
         <b>Магазин Глэйси — это онлайн- и офлайн-магазин по продаже мороженого собственного производства на развес</b>
-        <p><img src="ice-cream.svg" width="" height="" alt="">Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</p>
-        <p><img src="leaflet.svg" alt="">Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья. </p>
-        <p><img src="cow.svg" alt="">Закупка ингредиентов  производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</p>
-        <p><img src="thermometr.svg" alt="">Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.</p>
+        <p><img src="img/main/ice-cream.svg" width="49" height="49" alt="">Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</p>
+        <p><img src="img/main/leaflet.svg" width="49" height="49" alt="">Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья. </p>
+        <p><image src="img/main/cow.svg" width="49" height="49" alt="">Закупка ингредиентов  производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</p>
+        <p><img src="img/main/thermometr.svg" width="49" height="49" alt="">Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.</p>
       </section>
       <section class="news">
         <h3 class="visually-hidden">Новости</h3>
@@ -41,33 +58,35 @@
       </section>
       <section class="subscription">
         <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =) </p>
-        <input type="email" name="email" required placeholder="Электронная почта">
-        <input type="submit" value="Отправить">
+        <form action="/echo" method="post">
+          <input type="email" name="email" placeholder="Электронная почта" >
+          <input type="submit" value="Отправить">
+      </form>
       </section>
       <section class="map">
-
               <!-- Здесь будет карта -->
+        <p><img src="img/main/map.jpg" width="1200" height="429" alt="Карта"/></p>
       </section>
     </main>
     <footer class="main-footer">
         <div class="footer-social">
           <ul>
-            <li><a class="social-button" href="#">Твиттер</a></li>
-            <li><a class="social-button" href="#">Инстаграм</a></li>
-            <li><a class="social-button" href="#">Фейсбук</a></li>
-            <li><a class="social-button" href="#">Вконтакте</a></li>
+            <li><a class="social-button" href="#"><img src="img/footer/twitter.svg" width="32" height="32" alt="Твиттер"/></a></li>
+            <li><a class="social-button" href="#"><img src="img/footer/instagram.svg" width="32" height="32" alt="Инстаграм"/></a></li>
+            <li><a class="social-button" href="#"><img src="img/footer/facebook.svg" width="32" height="32" alt="Фейсбук"/></a></li>
+            <li><a class="social-button" href="#"><img src="img/footer/vk.svg" width="32" height="32" alt="Вконтакте"/></a></li>
           </ul>
         </div>
         <div class="footer-documents">
           <ul>
-            <li><a href="suplier.html">Для поставщиков</a></li>
+            <li><a href="suplier.html"><img src="img/footer/heart.svg" alt=""/>Для поставщиков</a></li>
             <li><a href="production.html">О производстве</a></li>
             <li><a href="documents.html">Наши документы</a></li>
             <li><a href="ecology.html">Экологические стандарты</a></li>
           </ul>
         </div>
         <p class="footer-copyright">
-          <a href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/logo-htmlacademy.html" alt="Логотип HTML Academy"></a></p>
+          <a href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/footer/logo-htmlacademy-small.svg" width="122" height="39" alt="Логотип HTML Academy"></a></p>
         <p class="footer-copyright">
           <a href="https://htmlacademy.ru/intensive/htmlcss">Сделано в HTML Academy &#169; 2017</a></p>
     </footer>
