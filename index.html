@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Глейси</title>
-    <style media="screen">
+    <style>
       body {
         background-color:#849d8f;
       }
@@ -17,6 +17,16 @@
         background-image: url("img/main/post-fon1.png");
         background-image: url("img/main/post-fon.png");
       }
+      .visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
     </style>
   </head>
   <body>
@@ -26,22 +36,66 @@
       <nav class="main-navigation">
         <ul class="site-navigation">
           <li><a href="catalog.html">Каталог</a></li>
+            <ul class="submenu"> <!--подменю-->
+              <li><a href="new-item-gllacy-catalog.html">Новинки</a></li>
+              <li><a href="creamy-gllacy-catalog.html">Сливочное</a></li>
+              <li><a href="sorbets-gllacy-catalog.html">Щербеты</a></li>
+              <li><a href="fruit-ice-gllacy-catalog.html">Фруктовый лед</a></li>
+              <li><a href="melorin-ice-gllacy-catalog.html">Мелорин</a></li>
+            </ul>
+          </div>
           <li><a href="delivery-and-payment.html">Доставка и оплата</a> </li>
           <li><a href="about-us.html">О Компании</a></li>
         </ul>
       </nav>
       <div class="user-navigation">
         <ul>
-          <li class="search-link"><img src="img//header/search.svg" width="17" height="17" alt="Поиск"></li>
-          <li class="login-link"><img src="img//header/login.svg" width="21" height="19" alt="Вход">Вход</li>
+          <li class="search-link"><img src="img/header/search.svg" width="17" height="17" alt="Поиск">
+            <div> <!--окно поиска-->
+              <form action="http://echo.htmlacademy.ru" method="post">
+                <input type="text" name="search" id="search" placeholder="Что ищем?">
+                  <label class="visibility-hidden" for="search">Поиск по сайту</label>
+              </form>
+            </div>
+          </li>
+          <li class="login-link"><img src="img/header/login.svg" width="21" height="19" alt="Вход">Вход
+            <div> <!--окно регистрации-->
+              <form class="" action="#" method="post">
+                <fieldset class="user-login">
+                  <legend class="visually-hidden">Личный кабинет</legend>
+                  <input type="email" name="user-email" placeholder="Электронная почта">
+                  <input type="password" name="password" placeholder="Пароль">
+                  <button type="submit">Войти</button>
+                </fieldset>
+                <a href="help-password.html">Забыли пароль?</a>
+                <a href="registration.html">Новая регистрация</a>
+              </form>
+            </div>
+          </li>
           <li class="basket-link"><img src="img/header/basket.svg" width="21" height="20" alt="Корзина">Пусто</li>
         </ul>
       </div>
+
     </header>
     <main>
       <h1 class="visually-hidden">Магазин мороженого «Gllacy Shop»</h1>
-      <!-- Здесь будет слайдер рекламной акции-->
-<img src="img/main/ice-cream-slider.png" width="647" height="584" alt="Корзина">
+      <section>
+        <!-- Здесь будет слайдер рекламной акции-->
+        <p class="slider-title">Крем-брюле и пломбир с млиновым джемом</p>
+        <img class="slider-image" src="img/main/ice-cream-slider.png" width="647" height="584" alt="Крем-брюле и пломбир с млиновым джемом">
+        <button type="button">Давайте оба!</button>
+      </section>
+      <section class="advertising-campaign">
+        <h2 class="visually-hidden">Рекламное предложение</h2>
+        <p class="advertising-campaign-bannner-left">
+          <img class="image-bannner-left" src="img/main/banner-left.png" width="560px" height="229px" alt"">При покупке 2кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.
+          <button type="button">Хочу варенье!</button>
+        </p>
+        <p class="advertising-campaign-bannner-right">
+          <img class="image-bannner-right" src="img/main/banner-right.png" width="560px" height="229px" alt"">При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.
+          <button type="button">Хочу шоколадки!</button>
+        </p>
+      </section>
 
       <section class="features">
         <h2 class="visually-hidden">Преимущества</h2>
@@ -57,15 +111,29 @@
         <a class="news-link" href="news.html">10 способов сервировки фруктовых щербетов к столу</a>
       </section>
       <section class="subscription">
+        <h3 class="visually-hidden">Подписка</h3>
         <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =) </p>
-        <form action="/echo" method="post">
-          <input type="email" name="email" placeholder="Электронная почта" >
-          <input type="submit" value="Отправить">
-      </form>
+        <form class="subscription-form" action="http://echo.htmlacademy.ru" method="post">
+          <label for="subscription">Форма подписки</label>
+          <input type="email" id="subscription" name="email" placeholder="Электронная почта" >
+          <button type="submit">Отправить</button>
+        </form>
       </section>
       <section class="map">
               <!-- Здесь будет карта -->
-        <p><img src="img/main/map.jpg" width="1200" height="429" alt="Карта"/></p>
+        <p><img src="img/main/map.jpg" width="1200" height="429" alt="Главный офис компании и оффлайн-магазин по адресу: г.Санкт-Петербург, ул. Большая Конюшенная 19/8"/></p>
+        <form class="feedback">
+          <p>Мы обязательно вам ответим!</p>
+          <fieldset>
+            <legend class="visually-hidden">Форма обратной связи</legend>
+            <p><input type="text" name="name" placeholder="Как вас зовут?"></p>
+            <p><input type="email" name="user-email" placeholder="Ваша почта для ответа?"></p>
+            <p><textarea rows="10" cols="35" name="text" placeholder="Напишите что-нибудь..."></textarea></p>
+          </fieldset>
+          <button type="submit">Отправить</button>
+          <button type="button">Закрыть</button>
+
+        </form>
       </section>
     </main>
     <footer class="main-footer">
