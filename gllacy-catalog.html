@@ -3,15 +3,48 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Глейси</title>
-    <style media="screen">
+    <style>
       body {
         background-color:#849d8f;
       }
+      fieldset {
+        display: inline-block;
+        border: none;
+        vertical-align: top;
+      }
+      .visually-hidden {
+        visibility: hidden;
+      }
+      .catalog-item {
+        display: inline-block;
+        width:20%;
+      }
+      button {
+    display:block;
+
+}
+    .basket-link-button {
+      margin-top:1em;
+    padding:5px 15px;
+    font-weight:bold;
+    background:#f7f6f3;
+    border:none;
+    border-radius: 12px;
+    background-image: linear-gradient(to bottom, #fff, #ddd);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+    text-shadow:0 1px 1px white;
+      display:block;
+      color:black;
+      vertical-align: middle;
+    }
+  ul {
+    list-style:none;
+  }
     </style>
   </head>
   <body>
     <header class="main-header">
-      <a href="index.html"><img class="main-header-logo" src="img/header/logo.svg" width="154" height="64" alt="Логотип «Gllacy Shop»"/></a>
+      <a href="index.html"><img class="main-header-logo" src="img/header/logo.svg" width="154" height="64" alt="Логотип «Gllacy Shop»"></a>
       <nav class="main-navigation">
         <ul class="site-navigation">
           <li class="site-navigation-current"><a href="catalog.html">Каталог</a></li>
@@ -19,13 +52,58 @@
           <li><a href="about-us.html">О Компании</a></li>
         </ul>
       </nav>
-        <div class="user-navigation">
-          <ul>
-            <li class="search-link"><img src="img/header/search.svg" width="17" height="17" alt="Поиск"/></li>
-            <li class="login-link"><img src="img/header/login.svg" width="21" height="19" alt="Вход"/></li>
-            <li class="basket-link"><img src="img/catalog/basket-full.svg" width="21" height="20" alt="Корзина"/></li>
-          </ul>
+      <div class="user-navigation">
+        <ul>
+          <li class="search-link"><img src="img/header/search.svg" width="17" height="17" alt="Поиск">
+            <div> <!--окно поиска-->
+              <form action="http://echo.htmlacademy.ru" method="post">
+                <input type="text" name="search" id="search" placeholder="Что ищем?">
+                  <label class="visually-hidden" for="search">Поиск по сайту</label>
+              </form>
+            </div>
+          </li>
+          <li class="login-link"><img src="img/header/login.svg" width="21" height="19" alt="Вход">Вход
+            <div> <!--окно регистрации-->
+              <form class="" action="#" method="post">
+                <fieldset class="user-login">
+                  <legend class="visually-hidden">Личный кабинет</legend>
+                  <input type="email" name="user-email" placeholder="Электронная почта">
+                  <input type="password" name="password" placeholder="Пароль">
+                  <button type="submit">Войти</button>
+                </fieldset>
+                <a href="help-password.html">Забыли пароль?</a>
+                <a href="registration.html">Новая регистрация</a>
+              </form>
+            </div>
+          </li>
+          <li class="basket-link">
+            <button class="basket-link-button" type="button"><img src="img/header/basket-full.svg" width="21" height="20" alt="Корзина"> 2 товара</button></li>
+        </ul>
+        <div>
+          <table>
+          <tbody align="left">
+           <tr>
+            <tr>
+              <td><button class="button-close"><a href="gllacy-catalog.html">x</a></button></td>
+              <td><a href="gllacy-catalog-item.html"><img src="img/header/basket-full-1.png" width="33px" height="33px" alt="Пломбир с апельсиновым джемом"/><span>Пломбир с апельсиновым джемом</span></a></td>
+              <td><span>1,5 кг х 200 руб.</span></td>
+              <td><span>300руб.</span></td>
+            </tr>
+            <tr>
+              <td><button class="button-close"><a href="gllacy-catalog.html">x</a></button></td>
+              <td><a href="gllacy-catalog-item.html"><img src="img/header/basket-full-2.png" width="33px" height="33px" alt="Клубничный пломбир с присыпкой из белого шоколада"/><span>Клубничный пломбир с присыпкой из белого шоколада</span></a></td>
+              <td><span>1,5 кг х 300 руб.</span></td>
+              <td><span>450руб.</span></td>
+           </tr>
+           <tr >
+              <td style="border-top:1px solid black;
+              text-align:right;" colspan="4" ><span>Итого: 750руб.</span></td>
+           </tr>
+          </tbody>
+          </table>
+          <button type="submit">Оформить заказ</button>
         </div>
+
     </header>
     <main class="container">
       <h1 class="page-title">Сливочное мороженое</h1>
@@ -39,37 +117,37 @@
 
         <!-- Здесь будет форма -->
 
-        <form action="/echo" method="post">
-          <div>
-            <div>
-              <label for="sorting">Сортировка:</label><br>
-              <select id="sorting" name="sorting">
-              <option>по популярности</option>
+        <form action="http://echo.htmlacademy.ru" method="post">
+
+            <fieldset>
+              <legend>Сортировка</legend>
+              <select name="sorting">
+                <option>по популярности</option>
+                <option>сначала недорогие</option>
+                <option>сначала дорогие</option>
+                <option>по жирности</option>
               </select>
-            </div>
-            <div>
               <!-- ползунок по  Цене, видимо, сделан в js (jQuery - UniSlider)-->
-              <label for="price">Цена: 100 руб.- 500 руб.</label><br>
+            </fieldset>
+            <fieldset>
+              <legend>Цена: 100 руб.- 500 руб.</legend>
               <input type="range" id="price" name="price">
-            </div>
-            <div>
-              <label for="fat_content">Жирность:</label><br>
-              <input type="radio" id="fat_content" name="fat_content">0%
-              <input type="radio" id="fat_content" name="fat_content" checked>до 10%
-              <input type="radio" id="fat_content" name="fat_content">до 30%
-              <input type="radio" id="fat_content" name="fat_content">выше 30%
-            </div>
-          </div>
-          <div>
-            <div>
+            </fieldset>
+            <fieldset>
+              <legend>Жирность:</legend>
+              <input type="radio"  name="fat_content">0%
+              <input type="radio"  name="fat_content" checked>до 10%
+              <input type="radio"  name="fat_content">до 30%
+              <input type="radio"  name="fat_content">выше 30%
+            </fieldset>
+            <fieldset>
               <label for="fillers">Наполнители:</label><br>
-              <input type="checkbox" id="fillers" name="fillers" checked>шоколадные
-              <input type="checkbox" id="fillers" name="fillers" checked>сахарные присыпки
-              <input type="checkbox" id="fillers" name="fillers">фрукты
-              <input type="checkbox" id="fillers" name="fillers">сиропы
-              <input type="checkbox" id="fillers" name="fillers">джемы
-            </div>
-          </div>
+              <input type="checkbox"  name="fillers-1" checked>шоколадные
+              <input type="checkbox"  name="fillers-2" checked>сахарные присыпки
+              <input type="checkbox"  name="fillers-3">фрукты
+              <input type="checkbox"  name="fillers-4">сиропы
+              <input type="checkbox"  name="fillers-5">джемы
+            </fieldset>
             <button type="submit">Применить</button>
         </form>
       </section>
