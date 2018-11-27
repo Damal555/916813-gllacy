@@ -63,17 +63,14 @@
             </div>
           </li>
           <li class="login-link"><img src="img/header/login.svg" width="21" height="19" alt="Вход">Вход
-            <div> <!--окно регистрации-->
-              <form class="" action="#" method="post">
-                <fieldset class="user-login">
-                  <legend class="visually-hidden">Личный кабинет</legend>
+            <div class="user-login"> <!--окно регистрации-->
+              <form class="" action="http://echo.htmlacademy.ru" method="post">
                   <input type="email" name="user-email" placeholder="Электронная почта">
                   <input type="password" name="password" placeholder="Пароль">
                   <button type="submit">Войти</button>
-                </fieldset>
-                <a href="help-password.html">Забыли пароль?</a>
-                <a href="registration.html">Новая регистрация</a>
               </form>
+              <a href="help-password.html">Забыли пароль?</a>
+              <a href="registration.html">Новая регистрация</a>
             </div>
           </li>
           <li class="basket-link">
@@ -81,27 +78,26 @@
         </ul>
         <div>
           <table>
-          <tbody align="left">
-           <tr>
-            <tr>
-              <td><button class="button-close"><a href="gllacy-catalog.html">x</a></button></td>
-              <td><a href="gllacy-catalog-item.html"><img src="img/header/basket-full-1.png" width="33px" height="33px" alt="Пломбир с апельсиновым джемом"/><span>Пломбир с апельсиновым джемом</span></a></td>
-              <td><span>1,5 кг х 200 руб.</span></td>
-              <td><span>300руб.</span></td>
-            </tr>
-            <tr>
-              <td><button class="button-close"><a href="gllacy-catalog.html">x</a></button></td>
-              <td><a href="gllacy-catalog-item.html"><img src="img/header/basket-full-2.png" width="33px" height="33px" alt="Клубничный пломбир с присыпкой из белого шоколада"/><span>Клубничный пломбир с присыпкой из белого шоколада</span></a></td>
-              <td><span>1,5 кг х 300 руб.</span></td>
-              <td><span>450руб.</span></td>
-           </tr>
-           <tr >
-              <td style="border-top:1px solid black;
-              text-align:right;" colspan="4" ><span>Итого: 750руб.</span></td>
-           </tr>
-          </tbody>
+            <tbody align="left">
+              <tr>
+                <td><button class="button-close">x</button></td>
+                <td><a href="gllacy-catalog-item.html"><img src="img/header/basket-full-1.png" width="33px" height="33px" alt="Пломбир с апельсиновым джемом"/>Пломбир с апельсиновым джемом</a></td>
+                <td>1,5 кг х 200 руб.</td>
+                <td>300руб.</td>
+              </tr>
+              <tr>
+                <td><button class="button-close">x</button></td>
+                <td><a href="gllacy-catalog-item.html"><img src="img/header/basket-full-2.png" width="33px" height="33px" alt="Клубничный пломбир с присыпкой из белого шоколада"/>Клубничный пломбир с присыпкой из белого шоколада</a></td>
+                <td>1,5 кг х 300 руб.</td>
+                <td>450руб.</td>
+              </tr>
+            </tbody>
           </table>
           <button type="submit">Оформить заказ</button>
+          <div style="border-top:1px solid black;
+               text-align:right;">
+               <span>Итого: 750руб.</span>
+          </div>
         </div>
 
     </header>
@@ -118,35 +114,61 @@
         <!-- Здесь будет форма -->
 
         <form action="http://echo.htmlacademy.ru" method="post">
-
-            <fieldset>
-              <legend>Сортировка</legend>
-              <select name="sorting">
-                <option>по популярности</option>
-                <option>сначала недорогие</option>
-                <option>сначала дорогие</option>
-                <option>по жирности</option>
-              </select>
-              <!-- ползунок по  Цене, видимо, сделан в js (jQuery - UniSlider)-->
-            </fieldset>
+          <fieldset>
+            <legend>Сортировка</legend>
+            <select name="sorting">
+              <option>по популярности</option>
+              <option>сначала недорогие</option>
+              <option>сначала дорогие</option>
+              <option>по жирности</option>
+            </select>
+            <!-- ползунок по  Цене, видимо, сделан в js (jQuery - UniSlider)-->
+          </fieldset>
             <fieldset>
               <legend>Цена: 100 руб.- 500 руб.</legend>
               <input type="range" id="price" name="price">
             </fieldset>
             <fieldset>
               <legend>Жирность:</legend>
-              <input type="radio"  name="fat_content">0%
-              <input type="radio"  name="fat_content" checked>до 10%
-              <input type="radio"  name="fat_content">до 30%
-              <input type="radio"  name="fat_content">выше 30%
+                <div>
+                  <input type="radio"  name="fat_content" id="fat-0" value="0%">
+                  <label for="fat-0">0%</label>
+                </div>
+                <div>
+                  <input type="radio"  name="fat_content" id="fat-10" value="до 10%" checked>
+                  <label for="fat-10">до 10%</label>
+                </div>
+                <div>
+                  <input type="radio"  name="fat_content" id="fat-30" value="до 30%">
+                  <label for="fat-30">до 30%</label>
+                </div>
+                <div>
+                  <input type="radio"  name="fat_content" id="fat-over"  value="выше 30%">
+                  <label for="fat-over">выше 30%</label>
+                </div>
             </fieldset>
             <fieldset>
-              <label for="fillers">Наполнители:</label><br>
-              <input type="checkbox"  name="fillers-1" checked>шоколадные
-              <input type="checkbox"  name="fillers-2" checked>сахарные присыпки
-              <input type="checkbox"  name="fillers-3">фрукты
-              <input type="checkbox"  name="fillers-4">сиропы
-              <input type="checkbox"  name="fillers-5">джемы
+              <legend>Наполнители:</legend>
+                <div>
+                  <input type="checkbox"  name="fillers-1" id="filler-1"checked>
+                  <label for="filler-1">шоколадные</label>
+                </div>
+                <div>
+                  <input type="checkbox"  name="fillers-2" id="filler-2" checked>
+                  <label for="filler-2">сахарные присыпки</label>
+                </div>
+                <div>
+                  <input type="checkbox"  name="fillers-3" id="filler-3" >
+                  <label for="id="filler-2" ">фрукты</label>
+                </div>
+                <div>
+                  <input type="checkbox"  name="fillers-4" id="filler-4">
+                  <label for="filler-4">сиропы</label>
+                </div>
+                <div>
+                  <input type="checkbox"  name="fillers-5" id="filler-5">
+                  <label for="filler-5">джемы</label>
+                </div>
             </fieldset>
             <button type="submit">Применить</button>
         </form>
