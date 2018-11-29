@@ -3,6 +3,11 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Глейси</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/gllacy-css.css" rel="stylesheet">
+
+    <!--
     <style>
       body {
         background-color:#849d8f;
@@ -27,10 +32,9 @@
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
-    </style>
+</style>-->
   </head>
   <body>
-
     <header class="main-header">
     <p><img class="main-header-logo" src="img//header/logo.svg" width="154" height="64" alt="Логотип «Gllacy Shop»"></p>
       <nav class="main-navigation">
@@ -48,8 +52,8 @@
           <li><a href="about-us.html">О Компании</a></li>
         </ul>
       </nav>
-      <div class="user-navigation">
-        <ul>
+      <div >
+        <ul class="user-navigation">
           <li class="search-link"><img src="img/header/search.svg" width="17" height="17" alt="Поиск">
             <div> <!--окно поиска-->
               <form action="http://echo.htmlacademy.ru" method="post">
@@ -58,17 +62,23 @@
               </form>
             </div>
           </li>
-          <li class="login-link"><img src="img/header/login.svg" width="21" height="19" alt="Вход">Вход
-            <div> <!--окно регистрации-->
-              <form class="" action="#" method="post">
+          <li ><img src="img/header/login.svg" width="21" height="19" alt="Вход">Вход
+            <div class="login-link"> <!--окно регистрации-->
+              <form action="#" method="post">
                 <fieldset class="user-login">
                   <legend class="visually-hidden">Личный кабинет</legend>
-                  <input type="email" name="user-email" placeholder="Электронная почта">
-                  <input type="password" name="password" placeholder="Пароль">
-                  <button type="submit">Войти</button>
+                  <p><input type="email" name="user-email" placeholder="Электронная почта">
+                  </p>
+                  <p>
+                  <input type="password" name="password" placeholder="Пароль"/>
+                </p>
+                <button type="submit">Войти</button>
+                <p>
+                    <a href="help-password.html">Забыли пароль?</a>
+                    <a href="registration.html">Новая регистрация</a>
+                </p>
                 </fieldset>
-                <a href="help-password.html">Забыли пароль?</a>
-                <a href="registration.html">Новая регистрация</a>
+
               </form>
             </div>
           </li>
@@ -85,6 +95,8 @@
         <img class="slider-image" src="img/main/ice-cream-slider.png" width="647" height="584" alt="Крем-брюле и пломбир с млиновым джемом">
         <button type="button">Давайте оба!</button>
       </section>
+
+    <div class="advertising-banners">
       <section class="advertising-campaign">
         <h2 class="visually-hidden">Рекламное предложение</h2>
         <p class="advertising-campaign-bannner-left">
@@ -96,6 +108,7 @@
           <button type="button">Хочу шоколадки!</button>
         </p>
       </section>
+    </div>
 
       <section class="features">
         <h2 class="visually-hidden">Преимущества</h2>
@@ -105,35 +118,35 @@
         <p><image src="img/main/cow.svg" width="49" height="49" alt="">Закупка ингредиентов  производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</p>
         <p><img src="img/main/thermometr.svg" width="49" height="49" alt="">Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.</p>
       </section>
+
+    <div class="index-columns">
       <section class="news">
         <h3 class="visually-hidden">Новости</h3>
         <b>Новое в нашем блоге</b>
         <a class="news-link" href="news.html">10 способов сервировки фруктовых щербетов к столу</a>
       </section>
+
       <section class="subscription">
         <h3 class="visually-hidden">Подписка</h3>
         <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =) </p>
         <form class="subscription-form" action="http://echo.htmlacademy.ru" method="post">
-          <label for="subscription">Форма подписки</label>
-          <input type="email" id="subscription" name="email" placeholder="Электронная почта" >
+          <label class="visually-hidden" for="subscription">Форма подписки</label>
+          <input type="email" id="subscription" name="email" placeholder="Электронная почта" required>
           <button type="submit">Отправить</button>
         </form>
       </section>
+    </div>
       <section class="map">
               <!-- Здесь будет карта -->
         <p><img src="img/main/map.jpg" width="1200" height="429" alt="Главный офис компании и оффлайн-магазин по адресу: г.Санкт-Петербург, ул. Большая Конюшенная 19/8"/></p>
-        <form class="feedback">
-          <p>Мы обязательно вам ответим!</p>
-          <fieldset>
-            <legend class="visually-hidden">Форма обратной связи</legend>
-            <p><input type="text" name="name" placeholder="Как вас зовут?"></p>
-            <p><input type="email" name="user-email" placeholder="Ваша почта для ответа?"></p>
-            <p><textarea rows="10" cols="35" name="text" placeholder="Напишите что-нибудь..."></textarea></p>
-          </fieldset>
-          <button type="submit">Отправить</button>
-          <button type="button">Закрыть</button>
-
-        </form>
+      <div class="feedback-map">
+        <p>Адрес главного офиса<br>и офлайн-магазина:<br>
+        <b>ул. Большая Конюшенная<br>19/8, Санкт-Петербургl</b></p>
+        <p>Для заказов по телефону:<br>
+        <b>8 812 450-25-25</b><br>
+        (с 10 до 20 ежедневно)</p>
+        <button type="button" name="feedback-button">Форма обратной связи</button>
+      </div>
       </section>
     </main>
     <footer class="main-footer">
@@ -146,7 +159,7 @@
           </ul>
         </div>
         <div class="footer-documents">
-          <ul>
+          <ul >
             <li><a href="suplier.html"><img src="img/footer/heart.svg" alt=""/>Для поставщиков</a></li>
             <li><a href="production.html">О производстве</a></li>
             <li><a href="documents.html">Наши документы</a></li>
@@ -160,5 +173,23 @@
     </footer>
   </body>
 </html>
-
+<div class="feedback">
+  <span>Мы обязательно вам ответим!</span>
+  <form>
+    <fieldset>
+      <legend class="visually-hidden">Форма обратной связи</legend>
+      <div>
+        <input type="text" name="name" placeholder="Как вас зовут?">
+      </div>
+      <div>
+        <input type="email" name="user-email" placeholder="Ваша почта для ответа?">
+      </div>
+      <div>
+        <textarea rows="10" cols="35" name="text" placeholder="Напишите что-нибудь..."></textarea>
+      </div>
+    </fieldset>
+    <button type="submit">Отправить</button>
+    <button type="button">Закрыть</button>
+  </form>
+</div>
 <!-- <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">HTML и CSS, уровень 1</a>».</p> -->
