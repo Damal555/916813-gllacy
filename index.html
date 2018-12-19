@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Глейси</title>
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
   </head>
@@ -19,19 +19,19 @@
             <div class="main-navigation-wrapper">
               <div class="main-navigation-container">
                 <ul class="site-navigation">
-                  <li><a href="catalog.html">Каталог</a>
+                  <li><a class="site-navigation-link" href="catalog.html">Каталог</a>
                     <div class="submenu">
                       <ul class="catalog-submenu">
                         <li><span>Новинки</span><div class="submenu-line"></div></li>
-                        <li>Сливочное</li>
+                        <li><a href="gllacy-catalog.html">Сливочное</a></li>
                         <li>Щербеты</li>
                         <li>Фруктовый лед</li>
                         <li>Мелорин</li>
                       </ul>
                     </div>
                   </li>
-                  <li><a href="delivery-and-payment.html">Доставка и оплата</a> </li>
-                  <li><a href="about-us.html">О Компании</a></li>
+                  <li><a class="site-navigation-link" href="delivery-and-payment.html">Доставка и оплата</a> </li>
+                  <li><a class="site-navigation-link" href="about-us.html">О Компании</a></li>
                 </ul>
                 <ul class="user-navigation">
                   <li class="search-link" aria-label="Поиск">
@@ -117,14 +117,14 @@
                 <span>Малинка даром!</span>
                 <p>
               При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.
-                  <a class="button advertising-banners-button" href="#">Хочу варенье!</a>
+                  <a class="button left-banner-button" href="#">Хочу варенье!</a>
                 </p>
               </div>
               <div class="banner banner-right">
                 <span>Шоколадки даром!</span>
                 <p>
               При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.
-                  <a class="button advertising-banners-button" href="#">Хочу шоколадки!</a>
+                  <a class="button right-banner-button" href="#">Хочу шоколадки!</a>
                 </p>
               </div>
             </section>
@@ -135,8 +135,7 @@
                   <a href="catalog-item.html">
                     <span class="marker-hit"></span>
                     <img class="catalog-item-image" src="img/main/product-1.png" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой"/>
-                    <span class="catalog-item-title">Сливочное с апельсиновым джемом и цитрусовой стружкой
-                    </span>
+                    <span class="catalog-item-title">Сливочное с апельсиновым джемом и цитрусовой стружкой</span>
                   </a>
                   <span class="catalog-item-price">310<img src="img/main/hit-price.png"></span>
                 </li>
@@ -144,8 +143,7 @@
                   <a href="catalog-item.html">
                     <span class="marker-hit"></span>
                     <img class="catalog-item-image" src="img/main/product-2.png" width="267" height="267" alt="Сливочно-кофейное с кусочками шоколада"/>
-                    <span class="catalog-item-title">Сливочно-кофейное с кусочками шоколада
-                    </span>
+                    <span class="catalog-item-title">Сливочно-кофейное с кусочками шоколада</span>
                   </a>
                   <span class="catalog-item-price">380<img src="img/main/hit-price.png"></span>
                 </li>
@@ -153,8 +151,7 @@
                   <a href="catalog-item.html">
                     <span class="marker-hit"></span>
                     <img class="catalog-item-image" src="img/main/product-3.png" width="267" height="267" alt="Сливочно-клубничное с присыпкой из белого шоколада"/>
-                    <span class="catalog-item-title">Сливочно-клубничное с присыпкой из белого шоколада
-                    </span>
+                    <span class="catalog-item-title">Сливочно-клубничное с присыпкой из белого шоколада</span>
                   </a>
                   <span class="catalog-item-price">355<img src="img/main/hit-price.png"></span>
                 </li>
@@ -162,8 +159,7 @@
                   <a href="catalog-item.html">
                     <span class="marker-hit"></span>
                     <img class="catalog-item-image" src="img/main/product-4.png" width="267" height="267" alt="Сливочное крем-брюле с карамельной подливкой"/>
-                    <span class="catalog-item-title">Сливочное крем-брюле с карамельной подливкой
-                    </span>
+                    <span class="catalog-item-title">Сливочное крем-брюле с карамельной подливкой</span>
                   </a>
                   <span class="catalog-item-price">415<img src="img/main/hit-price.png"></span>
                 </li>
@@ -171,7 +167,7 @@
             </section>
             <section class="features">
               <h2 class="visually-hidden">Преимущества</h2>
-              <b>Магазин Глэйси — это онлайн- и офлайн-магазин по продаже мороженого собственного производства на развес</b>
+              <h2>Магазин Глэйси — это онлайн- и офлайн-магазин по продаже мороженого собственного производства на развес</h2>
               <ul class="features-list">
                 <li class="features-item">
                   <img src="D:/HTMLacademy/проект/916813-gllacy/img/main/ice-cream.svg" width="49" height="49" alt="">
@@ -179,7 +175,7 @@
                 </li>
                 <li class="features-item">
                   <img src="D:/HTMLacademy/проект/916813-gllacy/img/main/cow.svg" width="49" height="49" alt="">
-                  <p>Закупка ингредиентов  производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</p>
+                  <p>Закупка ингредиентов   производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</p>
                 </li>
                 <li class="features-item">
                   <img src="D:/HTMLacademy/проект/916813-gllacy/img/main/leaflet.svg" width="49" height="49" alt="">
@@ -247,7 +243,87 @@
             </div>
           </div>
         </footer>
+        <section class="modal modal-login">
+          <h2 class="visually-hidden">Личный кабинет</h2>
+          <span>Мы обязательно вам ответим!</span>
+          <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
+            <p>
+              <label class="visually-hidden" for="user-name">Имя пользователя</label>
+              <input class="login-icon-user" id="user-name" type="text" name="login" placeholder="Как вас зовут?">
+            </p>
+            <p>
+              <label class="visually-hidden" for="user-email">email пользователя</label>
+              <input class="login-icon-email" id="user-email" type="email" name="email" placeholder="Ваша почта для ответа?">
+            </p>
+            <p>
+              <textarea  style="width:429px; height:155px;" name="text" placeholder="Напишите что-нибудь..."></textarea>
+            </p>
+            <button class="button modal-button" type="submit">Отправить</button>
+          </form>
+          <button class="modal-close" type="button">Закрыть</button>
+        </section>
       </div>
     </div>
+    <script>
+      var link = document.querySelector(".feedback-button");
+
+      var popup = document.querySelector(".modal-login");
+      var close = popup.querySelector(".modal-close");
+
+      var form = popup.querySelector("form");
+      var login = popup.querySelector("[name=login]");
+      var email = popup.querySelector("[name=email]");
+
+      var isStorageSupport = true;
+      var storage = "";
+
+      try {
+        storage = localStorage.getItem("login");
+      } catch (err) {
+        isStorageSupport = false;
+      }
+
+      link.addEventListener("click", function (evt) {
+        evt.preventDefault();
+        popup.classList.add("modal-show");
+
+        if (storage) {
+          login.value = storage;
+          email.focus();
+        } else {
+          login.focus();
+        }
+      });
+
+      close.addEventListener("click", function (evt) {
+        evt.preventDefault();
+        popup.classList.remove("modal-show");
+        popup.classList.remove("modal-error");
+      });
+
+      form.addEventListener("submit", function (evt) {
+        if (!login.value || !email.value) {
+          evt.preventDefault();
+          popup.classList.remove("modal-error");
+          popup.offsetWidth = popup.offsetWidth;
+          popup.classList.add("modal-error");
+        } else {
+          if (isStorageSupport) {
+            localStorage.setItem("login", login.value);
+          }
+        }
+      });
+
+      window.addEventListener("keydown", function (evt) {
+        if (evt.keyCode === 27) {
+          evt.preventDefault();
+          if (popup.classList.contains("modal-show")) {
+            popup.classList.remove("modal-show");
+            popup.classList.remove("modal-error");
+          }
+        }
+      });
+    </script>
+
   </body>
 </html>
