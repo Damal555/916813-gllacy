@@ -1,8 +1,7 @@
 html,
 body{
-  margin: 0px auto;
+  margin: 0px;
   padding:0px;
-  width: 1200px;
 }
 
 body{
@@ -16,6 +15,18 @@ body{
 
   background-color: #849d8f;
 }
+
+
+.site-wrapper::after {
+  background-image: url("D:/HTMLacademy/проект/916813-gllacy/img/main/slider-item3.png");
+}
+
+.container {
+  width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
 
 .visually-hidden:not(:focus):not(:active),
   input[type="checkbox"].visually-hidden,
@@ -35,31 +46,43 @@ body{
   overflow: hidden;
 }
 
-.site-wrapper {
-  min-width: 940px;
-  background-color: #849d8f;
-  background-image: url("../img/main/slider-item1.png");
-  background-repeat: no-repeat;
-  background-position: top center;
+.slider {
+  position: relative;
 
-  /* Для демонстрации */
-  min-height: 100vh;
+  padding-top: 321px;
+
+  text-align: center;
+  color: #ffffff;
 }
-.container {
-  width: 900px;
+
+.slider-list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.slide {
+  display: none;
+}
+
+.slide-title {
+  width: 700px;
   margin: 0 auto;
-  padding: 0 20px;
+  margin-bottom: 27px;
+
+  font-size: 60px;
+  line-height: 60px;
+  font-weight: 800;
 }
 
 .button {
   display: inline-block;
   padding: 12px 44px;
 
-
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 24px;
-
+  font-weight: 600;
+  font-size: 31px;
+  line-height: 41px;
   text-align: center;
   color: #ffffff;
   vertical-align: top;
@@ -85,8 +108,57 @@ body{
   box-shadow: inset 0 2px 2px rgba(172, 16, 0, 1);
 }
 
-/*---------------HEADER---------*/
+.slider-controls {
+  position: absolute;
+  bottom: 63px;
+  left: 0;
+  z-index: 20;
 
+  font-size: 0;
+}
+
+.slider-controls label {
+  display: inline-block;
+  width: 17px;
+  height: 17px;
+  margin-right: 8px;
+
+  vertical-align: top;
+
+  background-color: transparent;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+#product-1:checked ~ .site-wrapper {
+  background-color: #849d8f;
+  background-image: url("D:/HTMLacademy/проект/916813-gllacy/img/main/slider-item1.png");
+}
+
+#product-2:checked ~ .site-wrapper {
+  background-color: #8996a6;
+  background-image: url("D:/HTMLacademy/проект/916813-gllacy/img/main/slider-item2.png");
+}
+
+#product-3:checked ~ .site-wrapper {
+  background-color: #9d8b84;
+  background-image: url("D:/HTMLacademy/проект/916813-gllacy/img/main/slider-item3.png");
+}
+
+#product-1:checked ~ .site-wrapper #slide1,
+#product-2:checked ~ .site-wrapper #slide2,
+#product-3:checked ~ .site-wrapper #slide3 {
+  display: block;
+}
+
+#product-1:checked ~ .site-wrapper label[for="product-1"],
+#product-2:checked ~ .site-wrapper label[for="product-2"],
+#product-3:checked ~ .site-wrapper label[for="product-3"] {
+  background-color: #ffffff;
+}
+
+/*---------------HEADER---------*/
 .main-header {
   margin: 0px;
   padding:0px;
@@ -131,8 +203,8 @@ body{
   width: 100%;
   display: flex;
 }
-/*
-.container {
+
+.main-navigation-container {
   margin: 0px;
   padding:0px;
 
@@ -140,8 +212,7 @@ body{
 
   display: flex;
   align-items: center;
-
-} */
+}
 
 .site-navigation,
 .user-navigation {
@@ -153,32 +224,30 @@ body{
   list-style: none;
 }
 
-.site-navigation>li{
+.site-navigation > li{
   margin: 0px;
   padding: 0px;
 
-  /* text-decoration: underline; */
+  text-decoration: underline;
 
   padding-bottom: 8px;
   padding-right: 28px;
   position: relative;
   display: inline-block;
+
 }
+
+
 
 .site-navigation {
   width: 675px;
   margin-right: 28px;
-}
+  }
 
 .site-navigation a,
 .user-navigation a {
   color: #ffffff;
   text-decoration: none;
-
-}
-
-.site-navigation a{
-  border-bottom: 1px solid #adbdb4;
 }
 
 .site-navigation a:hover,
@@ -222,9 +291,10 @@ li.search-link {
 li.search-link>a svg {
   position: absolute;
   top:7px;
-  left:7px;
-}
+  left:7;
 
+
+}
 .search-link:hover,
 .search-link:focus {
   background-color: #f8f7f4;
@@ -247,6 +317,7 @@ li.search-link:hover .search-link-form {
   margin: 0px auto;
   width: 340px;
 
+
   background-color: #f8f7f4;
   border-radius: 4px;
 
@@ -258,9 +329,9 @@ li.search-link:hover .search-link-form {
 }
 
 .search-link input {
-  margin: 21px 15px;
+  margin: 20px 15px;
   padding: 8px 0px;
-  padding-left: 12px;
+  padding-left: 30px;
 
   box-sizing: border-box;
   width: 311px;
@@ -297,7 +368,7 @@ li.search-link:hover .search-link-form {
   text-decoration: none;
   text-align: center;
 
-  padding: 8px 16px 8px 44px;
+  padding: 8px 16px 8px 45px;
 }
 
 
@@ -415,79 +486,20 @@ position: absolute;
   display: block;
 }
 
+
 /*-----------------MAIN  Slider--------*/
 
 .slider {
-  position: relative;
-
-  padding-top: 321px;
-
-  text-align: center;
-  color: #ffffff;
-}
-.slider-list {
-  margin: 0;
-  padding: 0;
-
-  list-style: none;
-}
-.slide {
-  display: none;
-}
-.slider-title {
-  width: 700px;
-  margin: 0 auto;
-  margin-bottom: 27px;
-
   font-size: 60px;
-  line-height: 60px;
-  font-weight: 800;
-}
-.slider-controls {
-  position: absolute;
-  bottom: 63px;
-  left: 0;
-  z-index: 20;
+  font-weight:700;
+  line-height: 60.35px;
+  color: #ffffff;
 
-  font-size: 0;
-}
-.slider-controls label {
-  display: inline-block;
-  width: 17px;
-  height: 17px;
-  margin-right: 8px;
 
-  vertical-align: top;
 
-  background-color: transparent;
-  border: 2px solid #ffffff;
-  border-radius: 50%;
-  cursor: pointer;
-}
-#product-1:checked ~ .site-wrapper {
-  background-color: #849d8f;
-  background-image: url("../img/main/slider-item1.png");
 }
 
-#product-2:checked ~ .site-wrapper {
-  background-color: #8996a6;
-  background-image: url("../img/main/slider-item2.png");
-}
 
-#product-3:checked ~ .site-wrapper {
-  background-color: #9d8b84;
-  background-image: url("../img/main/slider-item3.png");
-}
-#product-1:checked ~ .site-wrapper #slide1,
-#product-2:checked ~ .site-wrapper #slide2,
-#product-3:checked ~ .site-wrapper #slide3 {
-  display: block;
-}
-#product-1:checked ~ .site-wrapper label[for="product-1"],
-#product-2:checked ~ .site-wrapper label[for="product-2"],
-#product-3:checked ~ .site-wrapper label[for="product-3"] {
-  background-color: #ffffff;
-}
 /*-----------------MAIN  advertising-banners--------*/
 
 .advertising-banners {
@@ -502,7 +514,7 @@ position: absolute;
   justify-content: space-between;
 }
 
-.banner {
+.advertising-banners .banner {
   width: 560px;
   height: 229px;
 
@@ -513,7 +525,6 @@ position: absolute;
   display: block;
   margin-top: 16px;
   margin-left: 18px;
-
   padding: 0px;
 
   font-size: 35px;
@@ -524,15 +535,14 @@ position: absolute;
 
 .advertising-banners p{
   display: block;
-  margin-top: 15px;
-  margin-left: 19px;
+  margin-top: 14px;
+  margin-left: 18px;
   padding: 0px;
 
   font-size: 18px;
   font-weight: 700;
   line-height: 22px;
   color: #ffffff;
-  white-space: pre-wrap;
 }
 
 .banner-left {
@@ -1037,13 +1047,6 @@ padding-left: 14px;
   background-image: url("../img/footer/heart.svg");
   background-repeat: no-repeat;
   background-position: 114px 5px;
-}
-.footer-documents li:nth-child(1)::before {
-  content:"ff";
-  display:inline-block;
-  height:20px;
-  width:20px;
-  background-color: red;
 }
 
 .footer-documents li:nth-child(even) a {
