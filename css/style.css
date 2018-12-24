@@ -176,7 +176,7 @@ body{
 
 #product-1:checked ~ .site-wrapper {
   background-color: #849d8f;
-  background: url("D:/HTMLacademy/проект/916813-gllacy/img/main/slider-item1.png") 20px 50% no-repeat, radial-gradient(circle 520px,#cef5e0, #849d8f);
+  background: url("../img/main/slider-item1.png") 20px 50% no-repeat, radial-gradient(circle 520px,#cef5e0, #849d8f);
   background-position: top 74px center,top -875px center;
 }
 
@@ -694,8 +694,8 @@ li.basket-link a>svg {
 }
 .contacts-information {
   position: absolute;
-  top:-3px;
-  right:-1px;
+  top:-4px;
+  right:0px;
   text-align: right;
 }
 .contacts-information-time {
@@ -1712,7 +1712,7 @@ padding-right: 0px;
 
 /*-------------Filters --------*/
 .filters {
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 
 .filters-form fieldset {
@@ -1981,7 +1981,7 @@ box-sizing: border-box;
   justify-content: space-between;
   flex-wrap: wrap;
   font-size: 0px;
-  margin-bottom: 63px;
+  margin-bottom: 60px;
 }
 
 .catalog-list {
@@ -2093,13 +2093,9 @@ z-index: 9;
     border-bottom-color: #ffbc9e;
 }
 .catalog-item-card {
-    /* position: relative; */
     width: 267px;
     min-height: 324px;
-    /* margin-bottom: 38px; */
-    /* display: flex;
-    justify-content: flex-end;
-    flex-direction: column; */
+    margin-bottom: 22px;
 }
 
 .catalog-item-card:hover::after,
@@ -2140,7 +2136,7 @@ z-index: 9;
 }
 /*-------------------paginator------------*/
 .pagination {
-  margin-bottom: 29px;
+  margin-bottom: 30px;
 }
 .pagination-list {
 display: flex;
@@ -2150,12 +2146,13 @@ display: flex;
   margin: 0;
 
   list-style: none;
-position: relative;
+
 }
 
 .pagination-item {
 
 margin-right: 5px;
+
 }
 
 
@@ -2164,6 +2161,8 @@ margin-right: 5px;
 }
 
 .pagination-item a {
+  box-sizing: border-box;
+  padding-top: 1px;
   display: block;
   font-size: 16px;
   font-weight: 500;
