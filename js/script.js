@@ -11,48 +11,71 @@ var isStorageSupport = true;
 var storage = "";
 
 try {
-  storage = localStorage.getItem("login");
+    storage = localStorage.getItem("login");
 } catch (err) {
-  isStorageSupport = false;
+    isStorageSupport = false;
 }
 
 link.addEventListener("click", function(evt) {
-  evt.preventDefault();
-  popup.classList.add("modal-show");
+    evt.preventDefault();
+    popup.classList.add("modal-show");
 
-  if (storage) {
-    login.value = storage;
-    email.focus();
-  } else {
-    login.focus();
-  }
+    if (storage) {
+        login.value = storage;
+        email.focus();
+    } else {
+        login.focus();
+    }
 });
 
 close.addEventListener("click", function(evt) {
-  evt.preventDefault();
-  popup.classList.remove("modal-show");
-  popup.classList.remove("modal-error");
+    evt.preventDefault();
+    popup.classList.remove("modal-show");
+    popup.classList.remove("modal-error");
 });
 
 form.addEventListener("submit", function(evt) {
-  if (!login.value || !email.value) {
-    evt.preventDefault();
-    popup.classList.remove("modal-error");
-    popup.offsetWidth = popup.offsetWidth;
-    popup.classList.add("modal-error");
-  } else {
-    if (isStorageSupport) {
-      localStorage.setItem("login", login.value);
+    if (!login.value || !email.value) {
+        evt.preventDefault();
+        popup.classList.remove("modal-error");
+        popup.offsetWidth = popup.offsetWidth;
+        popup.classList.add("modal-error");
+    } else {
+        if (isStorageSupport) {
+            localStorage.setItem("login", login.value);
+        }
     }
-  }
 });
 
 window.addEventListener("keydown", function(evt) {
-  if (evt.keyCode === 27) {
-    evt.preventDefault();
-    if (popup.classList.contains("modal-show")) {
-      popup.classList.remove("modal-show");
-      popup.classList.remove("modal-error");
+    if (evt.keyCode === 27) {
+        evt.preventDefault();
+        if (popup.classList.contains("modal-show")) {
+            popup.classList.remove("modal-show");
+            popup.classList.remove("modal-error");
+        }
     }
-  }
+});
+
+
+ymaps.ready(function() {
+    var myMap = new ymaps.Map('map', {
+            center: [59.939647, 30.328728],
+            zoom: 16,
+            controls: ['zoomControl']
+        }, {
+            searchControlProvider: 'yandex#search'
+        }),
+
+        myPlacemark = new ymaps.Placemark([59.938631, 30.323055], {
+            hintContent: 'Glacy здесь!',
+            balloonContent: 'Большая Конюшенная ул., 19/8, Санкт-Петербург'
+        }, {
+            iconLayout: 'default#image',
+            iconImageHref: 'img/main/pointer.svg',
+            iconImageSize: [80, 140],
+            iconImageOffset: [-40, -140]
+        })
+    myMap.geoObjects
+        .add(myPlacemark)
 });
